@@ -4,7 +4,7 @@ category: '[bindjulia]'
 
 templates:
   imports: import bindjulia
-  make: bindjulia.julia_mult()
+  make: bindjulia.pyjulia_mult()
 
 #  Make one 'parameters' list entry for every parameter you want settable from the GUI.
 #     Keys include:
