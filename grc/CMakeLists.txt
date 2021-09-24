@@ -7,6 +7,6 @@
 #
 
 install(FILES
-    bindjulia_julia_mult.block.yml
+    bindjulia_pyjulia_mult.block.yml
     bindjulia_cppmult.block.yml DESTINATION share/gnuradio/grc/blocks
 )

@@ -41,7 +41,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [248, 12.0]
+    coordinate: [272, 12.0]
     rotation: 0
     state: enabled
 - name: analog_sig_source_x_0
@@ -85,7 +85,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [536, 384.0]
+    coordinate: [520, 328.0]
     rotation: 0
     state: true
 - name: bindjulia_cppmult_0
@@ -102,7 +102,7 @@ blocks:
     bus_structure: null
     coordinate: [1200, 228.0]
     rotation: 0
-    state: disabled
+    state: enabled
 - name: bindjulia_julia_mult_0
   id: bindjulia_julia_mult
   parameters:
@@ -115,9 +115,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1168, 356.0]
+    coordinate: [1200, 364.0]
     rotation: 0
-    state: true
+    state: disabled
 - name: blocks_null_sink_0
   id: blocks_null_sink
   parameters:
@@ -132,7 +132,7 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1400, 240.0]
+    coordinate: [1528, 240.0]
     rotation: 0
     state: true
 - name: qtgui_number_sink_0
@@ -195,9 +195,9 @@ blocks:
     bus_sink: false
     bus_source: false
     bus_structure: null
-    coordinate: [1520, 296.0]
+    coordinate: [1520, 344.0]
     rotation: 0
-    state: true
+    state: disabled
 
 connections:
 - [analog_sig_source_x_0, '0', bindjulia_cppmult_0, '0']
@@ -205,6 +205,7 @@ connections:
 - [analog_sig_source_x_0_0, '0', bindjulia_cppmult_0, '1']
 - [analog_sig_source_x_0_0, '0', bindjulia_julia_mult_0, '1']
 - [bindjulia_cppmult_0, '0', blocks_null_sink_0, '0']
+- [bindjulia_cppmult_0, '0', qtgui_number_sink_0, '0']
 - [bindjulia_julia_mult_0, '0', blocks_null_sink_0, '0']
 - [bindjulia_julia_mult_0, '0', qtgui_number_sink_0, '0']
 

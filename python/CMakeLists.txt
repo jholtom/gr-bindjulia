@@ -22,7 +22,7 @@ add_subdirectory(bindings)
 GR_PYTHON_INSTALL(
     FILES
     __init__.py
-    julia_mult.py DESTINATION ${GR_PYTHON_DIR}/bindjulia
+    pyjulia_mult.py DESTINATION ${GR_PYTHON_DIR}/bindjulia
 )
 
 ########################################################################

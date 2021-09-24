@@ -20,5 +20,5 @@ except ModuleNotFoundError:
     pass
 
 # import any pure python here
-from .julia_mult import julia_mult
+from .pyjulia_mult import pyjulia_mult
 #

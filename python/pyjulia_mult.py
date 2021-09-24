@@ -11,13 +11,13 @@ import numpy
 import copy
 from gnuradio import gr
 
-class julia_mult(gr.sync_block):
+class pyjulia_mult(gr.sync_block):
     """
-    docstring for block julia_mult
+    docstring for block pyjulia_mult
     """
     def __init__(self):
         gr.sync_block.__init__(self,
-            name="julia_mult",
+            name="pyjulia_mult",
             in_sig=[numpy.float32, numpy.float32 ],
             out_sig=[numpy.float32, ])
 
