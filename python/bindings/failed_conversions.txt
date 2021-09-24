@@ -1,0 +1,3 @@
+./include/bindjulia/cppmult.hError occurred while running CASTXML:  status:1
+./include/bindjulia/cppmult.hError occurred while running CASTXML:  status:1
+./include/bindjulia/cppmult.hError occurred while running CASTXML:  status:1
