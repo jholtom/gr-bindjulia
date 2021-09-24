@@ -103,8 +103,8 @@ blocks:
     coordinate: [1200, 228.0]
     rotation: 0
     state: enabled
-- name: bindjulia_julia_mult_0
-  id: bindjulia_julia_mult
+- name: bindjulia_pyjulia_mult_0
+  id: bindjulia_pyjulia_mult
   parameters:
     affinity: ''
     alias: ''
@@ -201,13 +201,13 @@ blocks:
 
 connections:
 - [analog_sig_source_x_0, '0', bindjulia_cppmult_0, '0']
-- [analog_sig_source_x_0, '0', bindjulia_julia_mult_0, '0']
+- [analog_sig_source_x_0, '0', bindjulia_pyjulia_mult_0, '0']
 - [analog_sig_source_x_0_0, '0', bindjulia_cppmult_0, '1']
-- [analog_sig_source_x_0_0, '0', bindjulia_julia_mult_0, '1']
+- [analog_sig_source_x_0_0, '0', bindjulia_pyjulia_mult_0, '1']
 - [bindjulia_cppmult_0, '0', blocks_null_sink_0, '0']
 - [bindjulia_cppmult_0, '0', qtgui_number_sink_0, '0']
-- [bindjulia_julia_mult_0, '0', blocks_null_sink_0, '0']
-- [bindjulia_julia_mult_0, '0', qtgui_number_sink_0, '0']
+- [bindjulia_pyjulia_mult_0, '0', blocks_null_sink_0, '0']
+- [bindjulia_pyjulia_mult_0, '0', qtgui_number_sink_0, '0']
 
 metadata:
   file_format: 1

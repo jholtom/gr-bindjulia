@@ -22,12 +22,13 @@ class pyjulia_mult(gr.sync_block):
             out_sig=[numpy.float32, ])
 
     def start(self):
-        super().start()
         import julia
+        return super().start()
 
     def stop(self):
-        super().stop()
         # Need to unload Julia safely
+        julia = None
+        return super().stop()
 
     def work(self, input_items, output_items):
         in0, in1 = input_items

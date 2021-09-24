@@ -27,13 +27,23 @@ cppmult_impl::cppmult_impl()
                                  sizeof(input_type)),
           gr::io_signature::make(1 /* min outputs */, 1 /*max outputs */,
                                  sizeof(output_type))) {
-        jl_init();
     }
 
 /*
  * Our virtual destructor.
  */
 cppmult_impl::~cppmult_impl() {}
+
+
+bool cppmult_impl::start() {
+        jl_init();
+
+}
+
+bool cppmult_impl::stop() {
+
+}
+
 
 int cppmult_impl::work(int noutput_items,
                        gr_vector_const_void_star &input_items,
