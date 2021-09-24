@@ -1,5 +1,5 @@
-id: bindjulia_julia_mult
-label: julia_mult
+id: bindjulia_pyjulia_mult
+label: pyjulia_mult
 category: '[bindjulia]'
 
 templates:
