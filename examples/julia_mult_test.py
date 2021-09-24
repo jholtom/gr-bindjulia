@@ -115,7 +115,7 @@ class julia_mult_test(gr.top_block, Qt.QWidget):
         self._qtgui_number_sink_0_win = sip.wrapinstance(self.qtgui_number_sink_0.pyqwidget(), Qt.QWidget)
         self.top_layout.addWidget(self._qtgui_number_sink_0_win)
         self.blocks_null_sink_0 = blocks.null_sink(gr.sizeof_float*1)
-        self.bindjulia_julia_mult_0 = bindjulia.julia_mult()
+        self.bindjulia_cppmult_0 = bindjulia.cppmult()
         self.analog_sig_source_x_0_0 = analog.sig_source_f(samp_rate, analog.GR_CONST_WAVE, 1000, 2, 0, 0)
         self.analog_sig_source_x_0 = analog.sig_source_f(samp_rate, analog.GR_CONST_WAVE, 1000, 3, 0, 0)
 
@@ -124,10 +124,10 @@ class julia_mult_test(gr.top_block, Qt.QWidget):
         ##################################################
         # Connections
         ##################################################
-        self.connect((self.analog_sig_source_x_0, 0), (self.bindjulia_julia_mult_0, 0))
-        self.connect((self.analog_sig_source_x_0_0, 0), (self.bindjulia_julia_mult_0, 1))
-        self.connect((self.bindjulia_julia_mult_0, 0), (self.blocks_null_sink_0, 0))
-        self.connect((self.bindjulia_julia_mult_0, 0), (self.qtgui_number_sink_0, 0))
+        self.connect((self.analog_sig_source_x_0, 0), (self.bindjulia_cppmult_0, 0))
+        self.connect((self.analog_sig_source_x_0_0, 0), (self.bindjulia_cppmult_0, 1))
+        self.connect((self.bindjulia_cppmult_0, 0), (self.blocks_null_sink_0, 0))
+        self.connect((self.bindjulia_cppmult_0, 0), (self.qtgui_number_sink_0, 0))
 
 
     def closeEvent(self, event):
@@ -158,7 +158,7 @@ def main(top_block_cls=julia_mult_test, options=None):
 
     tb = top_block_cls()
 
-    tb.start(128)
+    tb.start()
 
     tb.show()
 

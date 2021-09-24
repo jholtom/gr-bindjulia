@@ -12,7 +12,7 @@ options:
     generate_options: qt_gui
     hier_block_src_path: '.:'
     id: julia_mult_test
-    max_nouts: '128'
+    max_nouts: '0'
     output_language: python
     placement: (0,0)
     qt_qss_theme: ''
@@ -197,7 +197,7 @@ blocks:
     bus_structure: null
     coordinate: [1520, 344.0]
     rotation: 0
-    state: disabled
+    state: enabled
 
 connections:
 - [analog_sig_source_x_0, '0', bindjulia_cppmult_0, '0']
